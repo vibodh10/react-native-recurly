@@ -22,7 +22,7 @@ export function formatCurrency(value: number, currency: string = 'GBP'): string 
 
     // Simple fallback: ensure 2 decimal places and add £ symbol
     const fallbackValue = typeof value === 'number' && !isNaN(value) ? value : 0;
-    return `£${fallbackValue.toFixed(2)}`;
+    return `${currency}${fallbackValue.toFixed(2)}`;
   }
 }
 
